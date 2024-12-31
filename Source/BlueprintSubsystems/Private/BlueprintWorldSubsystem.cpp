@@ -36,3 +36,8 @@ void UBlueprintWorldSubsystem::OnWorldComponentsUpdated(UWorld& World)
 
 	OnWorldComponentsUpdatedEvent(&World);
 }
+
+bool UBlueprintWorldSubsystem::DoesSupportWorldType(const EWorldType::Type WorldType) const
+{
+	return WorldType == EWorldType::Game || WorldType == EWorldType::PIE;
+}

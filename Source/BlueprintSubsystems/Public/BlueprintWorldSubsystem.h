@@ -21,6 +21,8 @@ public:
 	virtual void OnWorldBeginPlay(UWorld& InWorld) override;
 	virtual void OnWorldComponentsUpdated(UWorld& World) override;
 
+	virtual bool DoesSupportWorldType(const EWorldType::Type WorldType) const;
+
 protected:
 	UFUNCTION(BlueprintImplementableEvent)
 	void OnInitialize();
